@@ -33,7 +33,7 @@ def main():
         else:
             st.error("Please enter some text")
 
-    st.header("Pinboard")
+    st.header("🧾")
 
     all_inputs = get_all_inputs()
     if all_inputs:
