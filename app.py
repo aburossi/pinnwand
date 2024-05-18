@@ -9,7 +9,7 @@ client = gspread.authorize(credentials)
 
 # Attempt to open the specific spreadsheet
 try:
-    spreadsheet = client.open("WordCloudInputs")  # Replace with your spreadsheet name
+    spreadsheet = client.open("Pinnwand")  # Replace with your spreadsheet name
     worksheet = spreadsheet.sheet1
 except Exception as e:
     st.error(f"Error opening spreadsheet: {e}")
