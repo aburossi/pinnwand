@@ -21,15 +21,15 @@ def get_all_inputs():
     return worksheet.col_values(1)
 
 def main():
-    st.title("Collaborative Pinboard")
+    st.title("PinBoard")
 
-    st.header("Input Text")
-    user_input = st.text_area("Enter a short text for the pinboard")
+    st.header("Dein Text")
+    user_input = st.text_area("Tippe einen kurzen Text ein")
 
-    if st.button("Submit"):
+    if st.button("Senden"):
         if user_input.strip():
             add_input_to_sheet(user_input)
-            st.success("Text added!")
+            st.success("Text hinzugefügt!")
         else:
             st.error("Please enter some text")
 
