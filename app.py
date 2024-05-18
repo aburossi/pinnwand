@@ -9,7 +9,7 @@ client = gspread.authorize(credentials)
 
 # Attempt to open the specific spreadsheet
 try:
-    spreadsheet = client.open("Pinnwand")  # Replace with your spreadsheet name
+    spreadsheet = client.open("WordCloudInputs")  # Replace with your spreadsheet name
     worksheet = spreadsheet.sheet1
 except Exception as e:
     st.error(f"Error opening spreadsheet: {e}")
@@ -37,9 +37,9 @@ def main():
 
     all_inputs = get_all_inputs()
     if all_inputs:
-        for i, input_text in enumerate(all_inputs):
-            st.markdown(f"### Note {i+1}")
+        for input_text in all_inputs:
             st.markdown(f"> {input_text}")
+            st.markdown("<hr>", unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
